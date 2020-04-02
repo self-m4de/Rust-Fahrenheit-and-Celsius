@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    println!("Type 'cel' for celsius or 'far' for farenheit");
+    println!("Type 'cel' for celsius or 'far' for fahrenheit");
     let mut unit = String::new();
     io::stdin().read_line(&mut unit)
         .expect("Failed to read line");
@@ -30,15 +30,15 @@ fn main() {
 
 fn convert(unit: String, temp: f64) {
     if unit == "cel" {
-        let farenheit: f64 = 32.0 + (9.0 * temp / 5.0);
-        println!("{}°F", farenheit);
+        let fahrenheit: f64 = 32.0 + (9.0 * temp / 5.0);
+        println!("{}°F", fahrenheit);
         } 
     else if unit == "far" {
         let celsius: f64 = (temp - 32.0) * 5.0/9.0;
         println!("{}°C", celsius);
         }
     else {
-        println!("Please enter 'cel' for celsius or 'far' for farenheit");
+        println!("Please enter 'cel' for celsius or 'far' for fahrenheit");
     }
 
 }
